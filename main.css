@@ -1,0 +1,200 @@
+/* box sizing faz com que tudo que estou digitando seja criado com box sizing 
+
+com tamanho da borda e n'ao do conteudo Aqui zerei o padding e a margem
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    color: green
+}
+
+h2{
+    color: green;
+}
+/*com esse seletor, seleciono um elemento pela tag ou nome h2 para verde
+
+#economia h2 {
+    color: gold;
+}
+/*com esse seletor, seleciono um elemento pelo seu id criado no html
+
+#esportes h2 {
+    color: gray
+}
+
+.creation-date {
+    color: rgb(211, 214, 214);
+}
+aqui eu seleciono um elemento pela sua classe que foi criada no html e dou o parametro
+
+* {
+    color: rgb(0, 0, 0);
+}
+esse seletor especial muda tudo que eu n'ao especifiquie anteriormente
+
+
+
+/* lembrar que a ordem do box model é top, right, bottom e left
+lembrar que podemos abreviar as dimensóes também sempre que forem iguais
+de um lado para o outro tipo mesma medida em cima e em baixo, em uma
+lateral e outra ou tudo igual */ 
+
+/* daqui p frente começamos a arrumar o visual*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    display: block;
+    text-align:right;
+}
+
+body > header {
+    background-color: #000000;
+    padding: 10 0;
+    color: white;
+}
+/*aqui o header [e um descendente do body e por isso ele n'ao foi estilizado*/
+
+header .container {
+    display: flex;
+    align-items:baseline;
+    justify-content: space-between;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+/*com o parametro display flex, 
+que elas v'ao ficar lado a lado*/
+
+header li {
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    
+}
+/* o display inline deixa os elementos um do lado do outro*/
+
+header li a {
+    color: rgb(255, 255, 255);
+    margin: 08px;
+    text-decoration: none;
+}
+
+.container {
+    width: 1366px;
+    margin: 0 auto 0 auto;
+}
+/* o container [e criado para dizer p o navegador como ele tem
+que se comportar. O tamanho de uma tela hd padrao e de 1366px, 
+com margem top 0, direita auto, baixo 0 e esq auto  */
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* criei uma div (.articles e dei tab) ela cria e eu recorto e colo as 
+articles dentro dela, assim decido com o parametro display flex, 
+que elas v'ao ficar lado a lado  e o parametro wrap para add 
+linha caso entre algo a mais na linha e o parametro justify p usar
+os 10 % de espaço que ainda tenho */
+
+.articles article img {
+    /*height: 180px;*/
+    width: 100%;
+}
+
+.articles article {
+    width: 30%;
+}
+
+section {
+    padding: 16px 0;
+}
+
+section h2, .articles article {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.articles article h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.articles article a {
+    background-color: blue;
+    color: white;
+    padding: 8px;
+    display: inline-block;
+    text-decoration: none;
+}
+.articles article a:hover {
+    text-decoration: underline;
+}
+
+.articles article p,
+.articles article a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.articles article h3 {
+    font-size: 24px;
+}
+
+.articles article h2 {
+    font-size: 32px;
+}
+
+#esportes {
+    background-color: rgba(0, 255, 0, 10%);
+}
+
+#economia {
+    background: rgba(230, 0, 255, 0.1);
+}
+
+#esportes .articles article a {
+    background-color: rgb(215, 250, 220);
+    color: black;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+#economia .articles article a {
+    background-color: rgb(186, 155, 215);
+    color: black;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+#tecnologia {
+    background-color: rgb(222, 205, 185);
+}
+
+#tecnologia .articles article a {
+    background-color: rgb(181, 137, 126);
+    color: black;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+#entreterimento {
+    background-color: rgb(178, 252, 227);
+}
+
+#entreterimento .articles article a {
+    background-color: rgb(55, 202, 153);
+    margin-top: 8px;
+    font-weight: bold;
+    color: black;
+}
+
